@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import com.example.PrimeraEntregaWeb.model.Nave;
 import com.example.PrimeraEntregaWeb.repository.NaveRepository;
 
+import io.micrometer.common.lang.NonNull;
+
+@Service
 public class NaveService {
     @Autowired
     private NaveRepository naveRepositorio;
@@ -17,7 +20,8 @@ public class NaveService {
         return naveRepositorio.findAll();
     }
 
-    public Nave buscarNave(String nombre) {
+    @SuppressWarnings("null")
+    public Nave buscarNave(@NonNull String nombre) {
         return naveRepositorio.findById(nombre).orElseThrow();
     }
 
