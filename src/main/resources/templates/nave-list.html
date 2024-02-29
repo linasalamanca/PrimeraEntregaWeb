@@ -24,7 +24,7 @@
         </thead>
         <tbody>
 
-            <tr th:each="p : ${naves}" th:if="${p.nombre}">
+            <tr th:each="p : ${nave}" th:if="${p.nombre}">
                 <td th:text="${p.nombre}"></td>
                 <td th:text="${p.dinero}"></td>
                 <td th:text="${p.coordenadaX}"></td>
@@ -32,10 +32,11 @@
                 <td th:text="${p.coordenadaZ}"></td>
                 <td th:text="${p.Tiempo}"></td>
                 <td>
-                    <a th:href="@{/nave/view/{nombre}(id=${p.nombre})}">Ver</a>
+                    <a th:href="@{/nave/view/{nombre}(nombre=${p.nombre})}">Ver</a>
+                
                 </td>
                 <td>
-                    <a th:href="@{/nave/edit-form/{nombre}(id=${p.nombre})}">Editar</a>
+                    <a th:href="@{/nave/edit-form/{nombre}(nombre=${p.nombre})}">Editar</a>
                 </td>
             </tr>
         </tbody>

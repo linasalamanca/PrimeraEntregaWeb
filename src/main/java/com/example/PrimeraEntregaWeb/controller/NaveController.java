@@ -30,6 +30,7 @@ public class NaveController {
     @GetMapping("/list")
     public String listarNaves(Model model) {
         List<Nave> nave = naveServicio.listarNaves();
+        log.info("nave " + nave.size());
         model.addAttribute("nave", nave);
         return "nave-list";
     }
@@ -37,14 +38,16 @@ public class NaveController {
     @GetMapping("/view/{nombre}")
     String verNaves(Model model, @PathVariable("nombre") String nombre) {
         Nave nave = naveServicio.buscarNave(nombre);
-        model.addAttribute("nombre", nombre);
+        log.info("nave " + nave);
+
+        model.addAttribute("nave", nave);
         return "nave-view";
     }
 
     @GetMapping("/edit-form/{nombre}")
     public String formularioEditarNave(Model model, @PathVariable String nombre) {
-        Nave n = naveServicio.buscarNave(nombre);
-        model.addAttribute("nombre", n);
+        Nave nave = naveServicio.buscarNave(nombre);
+        model.addAttribute("nave", nave);
         return "nave-edit";
     }
 
@@ -54,7 +57,7 @@ public class NaveController {
             return "nave-edit";
         }
         naveServicio.guardarNave(nave);
-        return "redirect:/nave/lista";
+        return "redirect:/nave/list";
     }
 
     @GetMapping("/search")

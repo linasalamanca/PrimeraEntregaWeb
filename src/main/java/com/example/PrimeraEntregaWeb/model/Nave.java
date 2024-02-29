@@ -81,6 +81,9 @@ public class Nave {
         this.tiempo = tiempo;
     }
 
+    public Nave() {
+    }
+
     public Nave(int dinero, Double coordenadaX, Double coordenadaY, Double coordenadaZ, String nombre, Double tiempo) {
         this.dinero = dinero;
         this.coordenadaX = coordenadaX;
