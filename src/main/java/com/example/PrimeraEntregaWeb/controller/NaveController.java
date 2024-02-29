@@ -54,10 +54,10 @@ public class NaveController {
             return "nave-edit";
         }
         naveServicio.guardarNave(nave);
-        return "redirect:/nave/lista";
+        return "redirect:/nave/list";
     }
 
-    @GetMapping("/search")
+    /*@GetMapping("/search")
     public String listaNaves(@RequestParam(required = false) String searchText, Model model) {
         List<Nave> naves;
         if (searchText == null || searchText.trim().equals("")) {
@@ -67,5 +67,5 @@ public class NaveController {
         }
 
         return "nave-search";
-    }
+    }*/
 }
