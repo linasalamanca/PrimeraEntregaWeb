@@ -20,7 +20,7 @@ public class TipoNave {
     @NotBlank(message = "No puede estar en blanco")
     private String nombre;
     @Column(name = "volumenCarga", nullable = false)
-    @NotBlank(message = "No puede estar en blanco")
+    @NotBlank(message = "No puede estar en blanco") 
     private Float volumenCarga;
     @Column(name = "velocidad", nullable = false)
     @NotBlank(message = "No puede estar en blanco")
