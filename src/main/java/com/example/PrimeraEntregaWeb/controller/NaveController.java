@@ -60,15 +60,19 @@ public class NaveController {
         return "redirect:/nave/list";
     }
 
-    @GetMapping("/search")
-    public String listaNaves(@RequestParam(required = false) String searchText, Model model) {
-        List<Nave> naves;
-        if (searchText == null || searchText.trim().equals("")) {
-            log.info("No hay texto de búsqueda. Retornando todo");
-            naves = naveServicio.listarNaves();
-            model.addAttribute("nave", naves);
-        }
-
-        return "nave-search";
-    }
+    /* Hacer delete total y crear desde cero */
+    /*
+     * @GetMapping("/search")
+     * public String listaNaves(@RequestParam(required = false) String searchText,
+     * Model model) {
+     * List<Nave> naves;
+     * if (searchText == null || searchText.trim().equals("")) {
+     * log.info("No hay texto de búsqueda. Retornando todo");
+     * naves = naveServicio.listarNaves();
+     * model.addAttribute("nave", naves);
+     * }
+     * 
+     * return "nave-search";
+     * }
+     */
 }
