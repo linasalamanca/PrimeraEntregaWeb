@@ -1,5 +1,7 @@
 package com.example.PrimeraEntregaWeb.model;
 
+import javax.validation.constraints.NotBlank;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,15 +12,25 @@ import jakarta.persistence.Table;
 public class Nave {
     @Id
     private String nombre;
+
     @Column(name = "dinero", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private int dinero;
+
     @Column(name = "coordenadaX", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Double coordenadaX;
+
     @Column(name = "coordenadaY", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Double coordenadaY;
+
     @Column(name = "coordenadaZ", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Double coordenadaZ;
+
     @Column(name = "tiempo", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Double tiempo;
 
     public int getDinero() {
