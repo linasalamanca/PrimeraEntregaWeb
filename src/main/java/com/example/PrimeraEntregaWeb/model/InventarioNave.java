@@ -1,6 +1,19 @@
 package com.example.PrimeraEntregaWeb.model;
 
+import javax.validation.constraints.NotBlank;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 public class InventarioNave {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "cantidad", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Integer cantidad;
 
     public Integer getCantidad() {

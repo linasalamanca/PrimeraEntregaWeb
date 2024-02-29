@@ -1,8 +1,22 @@
 package com.example.PrimeraEntregaWeb.model;
 
+import javax.validation.constraints.NotBlank;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 public class Estrella {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "coordenadaX", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Float coordenadaX;
+    @Column(name = "coordenadaY", nullable = false)
+    @NotBlank(message = "no puede estar en blanco")
     private Float coordenadaY;
 
     public Float getCoordenadaX() {
