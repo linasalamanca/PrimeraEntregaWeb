@@ -1,12 +1,25 @@
 package com.example.PrimeraEntregaWeb.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "nave")
 public class Nave {
-    private int dinero;
-    private Float coordenadaX;
-    private Float coordenadaY;
-    private Float coordenadaZ;
+    @Id
     private String nombre;
-    private Float tiempo;
+    @Column(name = "dinero", nullable = false)
+    private int dinero;
+    @Column(name = "coordenadaX", nullable = false)
+    private Double coordenadaX;
+    @Column(name = "coordenadaY", nullable = false)
+    private Double coordenadaY;
+    @Column(name = "coordenadaZ", nullable = false)
+    private Double coordenadaZ;
+    @Column(name = "tiempo", nullable = false)
+    private Double tiempo;
 
     public int getDinero() {
         return dinero;
@@ -16,27 +29,27 @@ public class Nave {
         this.dinero = dinero;
     }
 
-    public Float getCoordenadaX() {
+    public Double getCoordenadaX() {
         return coordenadaX;
     }
 
-    public void setCoordenadaX(Float coordenadaX) {
+    public void setCoordenadaX(Double coordenadaX) {
         this.coordenadaX = coordenadaX;
     }
 
-    public Float getCoordenadaY() {
+    public Double getCoordenadaY() {
         return coordenadaY;
     }
 
-    public void setCoordenadaY(Float coordenadaY) {
+    public void setCoordenadaY(Double coordenadaY) {
         this.coordenadaY = coordenadaY;
     }
 
-    public Float getCoordenadaZ() {
+    public Double getCoordenadaZ() {
         return coordenadaZ;
     }
 
-    public void setCoordenadaZ(Float coordenadaZ) {
+    public void setCoordenadaZ(Double coordenadaZ) {
         this.coordenadaZ = coordenadaZ;
     }
 
@@ -48,15 +61,15 @@ public class Nave {
         this.nombre = nombre;
     }
 
-    public Float getTiempo() {
+    public Double getTiempo() {
         return tiempo;
     }
 
-    public void setTiempo(Float tiempo) {
+    public void setTiempo(Double tiempo) {
         this.tiempo = tiempo;
     }
 
-    public Nave(int dinero, Float coordenadaX, Float coordenadaY, Float coordenadaZ, String nombre, Float tiempo) {
+    public Nave(int dinero, Double coordenadaX, Double coordenadaY, Double coordenadaZ, String nombre, Double tiempo) {
         this.dinero = dinero;
         this.coordenadaX = coordenadaX;
         this.coordenadaY = coordenadaY;
