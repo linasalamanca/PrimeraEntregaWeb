@@ -3,11 +3,14 @@ package com.example.PrimeraEntregaWeb.model;
 import javax.validation.constraints.NotBlank;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Jugador {
-
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "rol", nullable = false)
@@ -48,5 +51,9 @@ public class Jugador {
         this.rol = rol;
         this.usuario = usuario;
         this.contrasena = contrasena;
+    }
+
+    public Jugador() {
+
     }
 }

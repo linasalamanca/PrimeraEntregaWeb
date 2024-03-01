@@ -1,9 +1,11 @@
 package com.example.PrimeraEntregaWeb.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.example.PrimeraEntregaWeb.model.Producto;
 
-public interface ProductoRepository extends JpaRepository<Producto, String>{
-    
+@Repository
+public interface ProductoRepository extends JpaRepository<Producto, String> {
+
 }
