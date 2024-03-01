@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.PrimeraEntregaWeb.model.Nave;
 
-@Repository
+//@Repository
 public interface NaveRepository extends JpaRepository<Nave, String> {
 
 }

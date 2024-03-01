@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.PrimeraEntregaWeb.model.Estrella;
 
-@Repository
+//@Repository
 public interface EstrellaRepository extends JpaRepository<Estrella, Long> {
 
 }

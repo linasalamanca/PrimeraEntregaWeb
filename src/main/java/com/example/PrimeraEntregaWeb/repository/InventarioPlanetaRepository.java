@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.PrimeraEntregaWeb.model.InventarioPlaneta;
 
-@Repository
-public interface InventarioPlanetaRepository extends JpaRepository<InventarioPlaneta, String> {
+//@Repository
+public interface InventarioPlanetaRepository extends JpaRepository<InventarioPlaneta, Long> {
 
 }

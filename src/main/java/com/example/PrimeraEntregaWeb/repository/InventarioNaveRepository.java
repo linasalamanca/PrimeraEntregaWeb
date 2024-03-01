@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.PrimeraEntregaWeb.model.InventarioNave;
 
-@Repository
+//@Repository
 public interface InventarioNaveRepository extends JpaRepository<InventarioNave, Long> {
 
 }
